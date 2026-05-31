@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Storyboard Engine</title>
+
+    <!--
+      Tailwind Play CDN compiles the utility classes in the browser. It is the
+      zero-config way to ship this app's styling. For a fully production-optimized
+      build you can later install Tailwind properly (see README "Going further"),
+      but the CDN works perfectly for a static GoDaddy upload.
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      html, body, #root { height: 100%; }
+      body { margin: 0; background-color: #09090b; color: #fafafa; }
+      .custom-scrollbar::-webkit-scrollbar { width: 8px; height: 8px; }
+      .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 8px; }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #52525b; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

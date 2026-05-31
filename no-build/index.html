@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Storyboard Engine</title>
+
+    <!-- Styling: Tailwind compiled in-browser -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Resolve bare imports (react / lucide-react) to real ESM bundles -->
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@18.3.1",
+          "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+          "react-dom": "https://esm.sh/react-dom@18.3.1",
+          "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+          "lucide-react": "https://esm.sh/lucide-react@0.400.0?deps=react@18.3.1"
+        }
+      }
+    </script>
+
+    <style>
+      html, body, #root { height: 100%; }
+      body { margin: 0; background-color: #09090b; color: #fafafa; }
+      .custom-scrollbar::-webkit-scrollbar { width: 8px; height: 8px; }
+      .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 8px; }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #52525b; }
+      #boot-msg { font-family: ui-monospace, monospace; color: #71717a; padding: 24px; }
+    </style>
+  </head>
+  <body>
+    <div id="root"><div id="boot-msg">Loading the storyboard engine… (first load compiles in your browser and can take a few seconds)</div></div>
+
+    <!-- Babel transforms the JSX in app.jsx in the browser. No build step required. -->
+    <script src="https://unpkg.com/@babel/standalone@7.25.6/babel.min.js"></script>
+    <script type="text/babel" data-type="module" data-presets="react" src="./app.jsx"></script>
+  </body>
+</html>
